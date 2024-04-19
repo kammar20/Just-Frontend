@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html,
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #111827;
+  color: #92a3ab;
+}
+
+.container {
+  width: 600px;
+  margin: 80px auto 0;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.accordion-header {
+  position: relative;
+  margin-bottom: 15px;
+  padding: 15px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #92a3ab;
+}
+
+.accordion-header::after {
+  content: '\f077';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 12px;
+  position: absolute;
+  right: 0px;
+  top: 20px;
+}
+
+.accordion-body {
+  height: 0px;
+  overflow: hidden;
+}
+
+.accordion-header.active {
+  color: #efefef;
+}
+
+.accordion-header.active::after {
+  content: '\f078';
+}
+
+.accordion-header.active + .accordion-body {
+  height: auto;
+  overflow: auto;
+  border-bottom: 1px solid #92a3ab;
+  padding-bottom: 10px;
+}
